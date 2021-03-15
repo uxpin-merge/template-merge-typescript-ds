@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# Create React/TypeScript DS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Create a new React app with TypeScript as the template
+  `npx create-react-app typescript-ds --template typescript`
 
-## Available Scripts
+- Add UXPin Merge to the project
+  `yarn add @uxpin/merge-cli`
 
-In the project directory, you can run:
+- Run the uxpin-merge init command (for JS)
+  `npx uxpin-merge init`
 
-### `yarn start`
+- Update the uxpin.config.js file:
+```
+@@ -4,12 +4,12 @@ module.exports = {
+       {
+         name: 'General',
+         include: [
+-          'src/components/Button/Button.js',
++          'src/components/Button/Button.tsx',
+         ],
+       },
+     ],
+     wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
+     webpackConfig: 'uxpin.webpack.config.js',
+   },
+-  name: 'Example Design System'
++  name: 'TypeScript Design System'
+ };
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Update the uxpin.webpack.config.js to handle TypeScript:
+```
+@@ -9,11 +9,15 @@ module.exports = {
+   },
+   resolve: {
+     modules: [__dirname, "node_modules"],
+-    extensions: ["*", ".js", ".jsx"]
++    extensions: ["*", ".js", ".jsx", ".ts", ".tsx"]
+   },
+   devtool: "source-map",
+   module: {
+     rules: [
++      {
++        test: /\.tsx?$/,
++        loader: 'awesome-typescript-loader',
++      },
+       {
+         test: /\.(s*)css$/,
+         use: [
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Install a TypeScript loader:
+  `yarn add awesome-typescript-loader --dev`
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Change the Button.js component file to Button.tsx:
+```
+@@ -1,21 +0,0 @@
+-import React from "react";
+-import PropTypes from "prop-types";
+-
+-function Button(props) {
+-  return (
+-    <button
+-      onClick={props.onClick}
+-      disabled={props.disabled}
+-    >
+-      {props.label}
+-    </button>
+-  );
+-}
+-
+-Button.propTypes = {
+-  onClick: PropTypes.func,
+-  disabled: PropTypes.bool,
+-  label: PropTypes.string,
+-};
+-
+-export { Button as default };
+diff --git a/src/components/Button/Button.tsx b/src/components/Button/Button.tsx
+new file mode 100644
+index 0000000..d9ca2ca
+--- /dev/null
++++ b/src/components/Button/Button.tsx
+@@ -0,0 +1,18 @@
++import React from "react";
++
++interface ButtonProps {
++  label: string;
++  disabled: boolean;
++  onClick(): void;
++}
++
++export default function Button(props: ButtonProps) {
++  return (
++    <button
++      onClick={props.onClick}
++      disabled={props.disabled}
++    >
++      {props.label}
++    </button>
++  );
++}
+```
