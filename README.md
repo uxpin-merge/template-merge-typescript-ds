@@ -42,7 +42,7 @@
      rules: [
 +      {
 +        test: /\.tsx?$/,
-+        loader: 'awesome-typescript-loader',
++        loader: 'ts-loader',
 +      },
        {
          test: /\.(s*)css$/,
@@ -50,7 +50,7 @@
 ```
 
 - Install a TypeScript loader:
-  `yarn add awesome-typescript-loader --dev`
+  `yarn add ts-loader --dev`
 
 - Change the Button.js component file to Button.tsx:
 ```
