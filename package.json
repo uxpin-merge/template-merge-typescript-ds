@@ -18,6 +18,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "uxpin": "npx uxpin-merge --disable-tunneling",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^5.2.1"
+    "ts-loader": "8.1.0"
   }
 }
