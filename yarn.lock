@@ -2498,8 +2498,8 @@
 
 "@uxpin/merge-cli@^2.7.10":
   version "2.7.10"
-  resolved "https://npm.pkg.github.com/download/@uxpin/merge-cli/2.7.10/8e6dadd19e089b026c371289d72eea9a3b02941a9a5bad6b67fd5058f651c006#16c240d39c76303c49144c3ef1c160407669a7bf"
-  integrity sha512-xV4QXd6tXvQqJaqyrW3z68i7knQV+rOxiUWwX0u25pJMlYGYS8VzQT1EcSCTdBeFB9vqTwe+gZcDw4yqAjQ8eg==
+  resolved "https://registry.npmjs.org/@uxpin/merge-cli/-/merge-cli-2.7.10.tgz#04c0d2333088ae659dae4e9da1bb9096a766e215"
+  integrity sha512-xXGC1dpmPKGPMr+p/HBYI5/rCsaXgDYc6eBfq6vXLEzweWwrIEN/YvNeTDOKa3jDMIJSYmK0djrbxqxTN4RpJQ==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-class-properties" "^7.2.3"
