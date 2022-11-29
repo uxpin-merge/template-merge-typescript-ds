@@ -5,6 +5,7 @@ module.exports = {
         name: 'General',
         include: [
           'src/components/Button/Button.tsx',
+          'src/components/Card.tsx',
         ],
       },
     ],
