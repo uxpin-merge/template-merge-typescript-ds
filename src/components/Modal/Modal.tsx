@@ -10,7 +10,7 @@ type Props = {
 export const Modal = ({ size, theme }: Props) => {
   return (
     <div>
-      Hello Modal! {size || "?"} {theme || "?"}
+      Hello Modal!
     </div>
   );
 };
