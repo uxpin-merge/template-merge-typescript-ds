@@ -5,7 +5,7 @@ type Props = {
 
 /**
  * @uxpinuseportal
- * @uxpindocurl https://bestofjs2.org
+ * @uxpindocurl https://bestofjs.org
  */
 export const Modal = ({ size, theme }: Props) => {
   return (
