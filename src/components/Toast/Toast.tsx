@@ -10,7 +10,7 @@ export const Toast = ({ position, message }: Props) => {
   return (
     <div
       style={{
-        position: "fixed",
+        position: "absolute",
         padding: 10,
         minWidth: 300,
         backgroundColor: "#ca8a04",
