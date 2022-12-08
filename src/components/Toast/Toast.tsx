@@ -16,7 +16,6 @@ export const Toast = ({ position, message }: Props) => {
         backgroundColor: "#ca8a04",
         color: "white",
         fontSize: 20,
-        zIndex: 100, // to be above Preview top bar
         ...getPositionStyle(position),
       }}
     >
