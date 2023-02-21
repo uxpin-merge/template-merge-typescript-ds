@@ -19,7 +19,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    ".uxpin-merge",
+    ".uxpin-merge"
   ],
   "include": [
     "src"
