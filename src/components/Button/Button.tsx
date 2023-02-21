@@ -1,9 +1,9 @@
 import React from "react";
 
-interface ButtonProps {
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
   label: string;
   disabled?: boolean;
-  onClick?(): void;
+  onClick?: () => void;
 }
 
 export default function Button(props: ButtonProps) {
