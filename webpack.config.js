@@ -2,7 +2,7 @@ const path = require('path');
 
 const config = {
   entry: [
-    './src'
+    './src/index.tsx'
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,9 +13,10 @@ const config = {
         {
             test: /\.tsx?$/,
             loader: 'ts-loader',
+            exclude: /node_modules/,
       },
       {
-        test: /\.(js|jsx|tsx)$/,
+        test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/
       },
@@ -27,6 +28,9 @@ const config = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   devServer: {
     'static': {
