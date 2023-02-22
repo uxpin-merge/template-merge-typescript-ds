@@ -7,12 +7,14 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
 }
 
 export default function Button(props: ButtonProps) {
+  const { onClick, disabled, label } = props;
+
   return (
     <button
-      onClick={props.onClick}
-      disabled={props.disabled}
+      onClick={onClick}
+      disabled={disabled}
     >
-      {props.label}
+      {label}
     </button>
   );
 }
