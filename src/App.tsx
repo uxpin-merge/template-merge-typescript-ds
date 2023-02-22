@@ -1,17 +1,10 @@
 import React from 'react';
 import Button from './components/Button/Button';
+import './App.css';
 
 function App() {
   return (
-    <div style={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100%",
-      maxWidth: 500,
-      margin: "0 auto"
-      }}>
+    <div className="container">
       <header>
         <p>
           Hello Merge!
