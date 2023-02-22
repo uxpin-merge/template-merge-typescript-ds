@@ -8,8 +8,8 @@ module.exports = {
         ],
       },
     ],
-    wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
-    webpackConfig: 'uxpin.webpack.config.js',
+    wrapper: 'src/components/UXPinWrapper/UXPinWrapper.tsx',
+    webpackConfig: 'webpack.config.js',
   },
   name: 'TypeScript Design System'
 };
