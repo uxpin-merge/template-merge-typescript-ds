@@ -1,4 +1,5 @@
 # Create React/TypeScript DS
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 - Create a new React app with TypeScript as the template
   `npx create-react-app typescript-ds --template typescript`
@@ -39,12 +40,14 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
 }
 
 export default function Button(props: ButtonProps) {
+  const { onClick, disabled, label } = props;
+
   return (
     <button
-      onClick={props.onClick}
-      disabled={props.disabled}
+      onClick={onClick}
+      disabled={disabled}
     >
-      {props.label}
+      {label}
     </button>
   );
 }

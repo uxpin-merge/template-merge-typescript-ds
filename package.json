@@ -8,9 +8,16 @@
     "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
     "@uxpin/merge-cli": "^3.0.1",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^2.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "style-loader": "^3.3.1",
@@ -23,13 +30,10 @@
   "scripts": {
     "uxpin": "npx uxpin-merge --disable-tunneling",
     "start": "webpack serve --mode development",
-    "build": "webpack"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build": "webpack",
+    "prettier:check": "npx prettier src/ --check .",
+    "prettier:write": "npx prettier src/ --write .",
+    "eslint": "npx eslint src/"
   },
   "browserslist": {
     "production": [
