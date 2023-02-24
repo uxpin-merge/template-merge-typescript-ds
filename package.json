@@ -31,8 +31,8 @@
     "uxpin": "npx uxpin-merge --disable-tunneling",
     "start": "webpack serve --mode development",
     "build": "webpack",
-    "prettier:check": "npx prettier src/ --check .",
-    "prettier:write": "npx prettier src/ --write .",
+    "prettier:check": "npx prettier src/ --check",
+    "prettier:write": "npx prettier src/ --write",
     "eslint": "npx eslint src/"
   },
   "browserslist": {
