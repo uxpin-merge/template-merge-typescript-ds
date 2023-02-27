@@ -1,8 +1,5 @@
-# Create React/TypeScript DS
+# Template Merge TypeScript DS
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
-- Create a new React app with TypeScript as the template
-  `npx create-react-app typescript-ds --template typescript`
 
 - Add UXPin Merge to the project
   `yarn add @uxpin/merge-cli`
@@ -10,7 +7,7 @@
 - Run the uxpin-merge init command (for JS)
   `npx uxpin-merge init`
 
-- Add your webpack to uxpin.config.js file:
+- Add your webpack to the `webpackConfig` field in uxpin.config.js file:
 ```
 @@ -4,12 +4,12 @@ module.exports = {
        {
@@ -28,10 +25,9 @@
  };
 ```
 
-- Install a TypeScript loader:
-  `yarn add ts-loader --dev`
+- Update UXPinWrapper.js to [UXPinWrapper.tsx](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/src/components/UXPinWrapper/UXPinWrapper.tsx):
 
-- Add your Component, Button.tsx for example:
+- Add your Component, [Button.tsx](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/src/components/Button/Button.tsx) for example:
 ```
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
   label: string;
@@ -52,5 +48,9 @@ export default function Button(props: ButtonProps) {
   );
 }
 ```
+
+- Make sure to add your component to the `include` array in [uxpin.config.js](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/52d17ce3d005d47df12f10fb9a4c59b1eff2e344/uxpin.config.js#L7)
+
+- run experimental mode: `npx uxpin-merge --disable-tunneling`
 
 Please take a look at [TS-Merge-Supported-Component-Syntax](https://github.com/uxpin-merge/Typescript-component-examples) for more examples.
