@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="container">
       <header>
-        <p>
-          Hello Merge!
-        </p>
+        <p>Hello Merge!</p>
       </header>
       <div>
         <Button label="Button"></Button>
