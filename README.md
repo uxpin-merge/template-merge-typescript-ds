@@ -4,10 +4,9 @@
 - Add UXPin Merge to the project
   `yarn add @uxpin/merge-cli`
 
-- Run the uxpin-merge init command (for JS)
-  `npx uxpin-merge init`
+- Add [uxpin.config.js](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/uxpin.config.js)
 
-- Add your webpack to the `webpackConfig` field in uxpin.config.js file:
+- Add your webpack to the `webpackConfig` field in `uxpin.config.js` file:
 ```
 @@ -4,12 +4,12 @@ module.exports = {
        {
@@ -25,7 +24,7 @@
  };
 ```
 
-- Update UXPinWrapper.js to [UXPinWrapper.tsx](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/src/components/UXPinWrapper/UXPinWrapper.tsx):
+- Add `UXPinWrapper.tsx` [UXPinWrapper.tsx](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/src/components/UXPinWrapper/UXPinWrapper.tsx):
 
 - Add your Component, [Button.tsx](https://github.com/uxpin-merge/template-merge-typescript-ds/blob/master/src/components/Button/Button.tsx) for example:
 ```
@@ -53,4 +52,6 @@ export default function Button(props: ButtonProps) {
 
 - run experimental mode: `npx uxpin-merge --disable-tunneling`
 
-Please take a look at [TS-Merge-Supported-Component-Syntax](https://github.com/uxpin-merge/Typescript-component-examples) for more examples.
+Please take a look at the following links for more information and examples:
+[TS-Merge-Supported-Component-Syntax](https://github.com/uxpin-merge/Typescript-component-examples)
+[Integrating Your Own Components](https://www.uxpin.com/docs/merge/integrating-your-own-components/#integration-with-wrappers-for-components)
