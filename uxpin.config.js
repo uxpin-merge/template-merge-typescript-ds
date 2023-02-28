@@ -4,8 +4,9 @@ module.exports = {
       {
         name: 'General',
         include: [
-          // 'src/components/Button/Button.tsx',
-          'src/components/ButtonMui/ButtonMui.tsx',
+          'src/components/Button/Button.tsx',
+          'src/components/ImportedProps/ImportedProps.tsx',
+          'src/components/ImportedExtendedProps/ImportedExtendedProps.tsx',
         ],
       },
     ],

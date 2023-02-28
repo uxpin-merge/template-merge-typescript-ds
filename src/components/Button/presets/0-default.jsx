@@ -1,10 +1,10 @@
 import * as React from "react";
-import ButtonMui from "../ButtonMui";
+import Button from "../Button";
 
 export default (
-  <ButtonMui
+  <Button
     uxpId="button"
     variant="contained">
       Click me!
-  </ButtonMui>
+  </Button>
 );
