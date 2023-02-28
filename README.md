@@ -53,5 +53,5 @@ export default function Button(props: ButtonProps) {
 - run experimental mode: `npx uxpin-merge --disable-tunneling`
 
 Please take a look at the following links for more information and examples:
-[TS-Merge-Supported-Component-Syntax](https://github.com/uxpin-merge/Typescript-component-examples)
-[Integrating Your Own Components](https://www.uxpin.com/docs/merge/integrating-your-own-components/#integration-with-wrappers-for-components)
+* [TS-Merge-Supported-Component-Syntax](https://github.com/uxpin-merge/Typescript-component-examples)
+* [Integrating Your Own Components](https://www.uxpin.com/docs/merge/integrating-your-own-components/#integration-with-wrappers-for-components)
