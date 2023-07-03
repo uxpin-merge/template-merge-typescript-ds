@@ -1,6 +1,5 @@
-import React from 'react';
-import Button from './components/Button/Button';
 import './App.css';
+import Button from './components/tme-button/tme-button';
 
 function App() {
   return (

@@ -1,4 +1,3 @@
-import * as React from 'react';
-import Button from '../Button';
+import Button from '../tme-button';
 
 export default <Button uxpId="button" disabled={false} label="Button"></Button>;
