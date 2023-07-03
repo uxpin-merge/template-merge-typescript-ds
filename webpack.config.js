@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 const config = {
@@ -37,7 +38,7 @@ const config = {
       },
       {
         test: /\.(png|jp(e*)g|svg|gif|woff)$/,
-        type: "assets/resources",
+        type: "asset/resource",
       }
     ]
   },

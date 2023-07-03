@@ -22,6 +22,6 @@
     ".uxpin-merge"
   ],
   "include": [
-    "src"
+    "src/**/*"
   ]
 }
