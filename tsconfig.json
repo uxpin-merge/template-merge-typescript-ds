@@ -22,6 +22,7 @@
     ".uxpin-merge"
   ],
   "include": [
-    "src"
+    "src",
+    "src/shared/custom.d.ts"
   ]
 }
