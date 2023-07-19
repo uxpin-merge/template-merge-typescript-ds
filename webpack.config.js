@@ -36,19 +36,12 @@ const config = {
         ]
       },
       {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'svg-url-loader',
-            options: {
-              limit: 10000,
-            },
-          },
-        ],
+        test: /\.(png|jp(e*)g|gif|woff)$/,
+        type: 'asset/resource'
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif|woff)$/,
-        type: 'asset/resource'
+        test: /\.svg$/,
+        type: 'asset/inline'
       }
     ]
   },

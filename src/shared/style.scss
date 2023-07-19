@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/DancingScript.woff2') format('woff2');
+}
+
+.test-font {
+  font-family: 'Dancing Script';
+  font-size: 50px;
+  color: black;
+}

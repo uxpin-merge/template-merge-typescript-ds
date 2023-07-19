@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+import '../../shared/style.scss'
 
 export default function UXPinWrapper({ children }: { children: ReactNode }) {
-  return children;
+  return <div className="test-font">{children}</div>;
 }
