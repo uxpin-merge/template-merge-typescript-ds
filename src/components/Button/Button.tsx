@@ -11,7 +11,7 @@ export default function Button(props: ButtonProps) {
 
   return (
     <button onClick={onClick} disabled={disabled}>
-      {label}
+      <img src="/src/shared/assets/demo.svg" alt="A Rectangle Image with SVG" />
     </button>
   );
 }
