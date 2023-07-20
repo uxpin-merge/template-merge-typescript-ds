@@ -2,11 +2,9 @@
   font-family: 'Dancing Script';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/DancingScript.woff2') format('woff2');
+  src: local('Dancing Script'), url('./assets/fonts/DancingScript.woff2') format('woff2');
 }
 
-.test-font {
-  font-family: 'Dancing Script';
-  font-size: 50px;
-  color: black;
+.theme-provider {
+  font-family: Dancing Script;
 }
