@@ -5,6 +5,7 @@ const config = {
     './src/index.tsx'
   ],
   output: {
+    publicPath: '',
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
@@ -26,6 +27,22 @@ const config = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(png|jp(e*)g|gif|woff)$/,
+        type: 'asset/resource'
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline'
       }
     ]
   },
